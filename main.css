@@ -2016,4 +2016,119 @@ section,
     background-size: cover;
     border-radius: 0.5rem;
     min-height: 250px;
+  } 
+  /* === FORM CARD STYLES === */
+.contact-form .form-card {
+  background-color: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.6s ease-in-out;
+  transition: transform 0.3s ease;
+}
+
+.contact-form  .form-card:hover {
+  transform: translateY(-4px);
+}
+
+/* === LABEL & INPUT ENHANCEMENTS === */
+.contact-form label.form-label {
+  font-weight: 600;
+  color: #333;
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+  border-radius: 8px;
+  border: 1px solid #ced4da;
+  padding: 0.6rem 0.75rem;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form .form-control:focus,.contact-form .form-select:focus {
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.2rem rgba(13, 110, 253, 0.25);
+}
+
+/* === RADIO & CHECKBOX === */
+.contact-form .form-check-input:checked {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* === BUTTON === */
+.contact-form button.btn-primary {
+  border-radius: 8px;
+  padding: 0.6rem 2rem;
+  font-weight: 600;
+  font-size: 1rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-form button.btn-primary:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+/* === TEXT AREA === */
+.contact-form textarea.form-control {
+  resize: vertical;
+  min-height: 120px;
+  border-radius: 8px;
+}
+
+/* === SMALL TEXT === */
+.contact-form .form-text {
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+/* === ANIMATION === */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
   }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* === MEDIA QUERY === */
+@media (max-width: 768px) {
+  .container.pt-5 {
+    padding: 2rem 1rem;
+  }
+
+  .form-card {
+    padding: 1.5rem;
+  }
+}
+.faq-section {
+  background-color: #f8f9fa;
+}
+
+.faq-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
+}
+
+.faq-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.faq-card h5 {
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+}
+
+.faq-card p {
+  font-size: 0.95rem;
+  color: #6c757d;
+}
