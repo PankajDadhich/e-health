@@ -40,10 +40,10 @@
 }
 
 .accent-background {
-  --background-color: #3fbbc0;
+  --background-color: #1a81c3;
   --default-color: #ffffff;
   --heading-color: #ffffff;
-  --surface-color: #65c9cd;
+  --surface-color: #1a81c3;
 }
 
 /* Smooth scroll */
@@ -933,7 +933,7 @@ section,
 .featured-services .service-item:before {
   content: "";
   position: absolute;
-  background: var(--accent-color);
+  background: #1a81c3;
   inset: 100% 0 0 0;
   transition: all 0.3s;
   z-index: -1;
@@ -974,7 +974,8 @@ section,
 }
 
 .featured-services .service-item:hover:before {
-  background: var(--accent-color);
+  /*background: var(--accent-color);*/
+   background: #1a81c3;
   inset: 0;
   border-radius: 0px;
 }
@@ -2022,4 +2023,9 @@ section,
   
 
   
+}
+
+.navbar.scrolled {
+  background-color: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(15px);
 }
