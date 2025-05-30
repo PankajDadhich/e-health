@@ -73,12 +73,28 @@ a:hover {
 
 h1,
 h2,
-h3,
-h4,
-h5,
-h6 {
-  color: var(--heading-color);
-  font-family: var(--heading-font);
+h3 {
+font-family: 'Playfair Display';
+  color: #0C4663;
+}
+h1{
+  font-size: 40px;
+
+}
+h2{
+  font-size: 35px;
+}
+h3{
+  font-size: 30px;
+}
+p{
+  font-family:'Nunito' !important;
+  font-size: 16px !important;
+}
+h4{
+    color: #0C4663;
+    font-family: 'Nunito';
+  font-size: 30px;
 }
 
 /* Pulsating Play Button
@@ -952,7 +968,7 @@ section,
 .featured-services .service-item h4 {
   font-weight: 700;
   margin-bottom: 15px;
-  font-size: 20px;
+
 }
 
 .featured-services .service-item h4 a {
@@ -2041,4 +2057,39 @@ color: #577E92;
 .navbar.scrolled {
   background-color: rgba(255, 255, 255, 0.9);
   backdrop-filter: blur(15px);
+}
+.carousel-wrapper {
+      overflow: hidden;
+      position: relative;
+    }
+
+    .carousel-track {
+      display: flex;
+      gap: 10px;
+      overflow-x: auto;
+      scroll-behavior: smooth;
+      padding: 10px;
+      scrollbar-width: none; /* Firefox */
+    }
+
+    .carousel-track::-webkit-scrollbar {
+      display: none; /* Chrome */
+    }
+
+    .step-card {
+      min-width: 150px;
+      max-width: 150px;
+      background: white;
+      border-radius: 25px;
+      text-align: center;
+      flex-shrink: 0;
+      color: #1682C4;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+.nav-link {
+  color: #1682C4 !important;
+}
+.icon-top{
+  position: relative;
+  top: 5px;
 }
