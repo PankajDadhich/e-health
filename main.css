@@ -1932,14 +1932,17 @@ color: #577E92;
 }
 
 /* === BUTTON === */
-.contact-form button.btn-primary {
+button.btn-primary {
   border-radius: 8px;
+  background-color: #0C4663 !important;
   padding: 0.6rem 2rem;
   font-weight: 600;
   font-size: 1rem;
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
-
+.bg-primary{
+ background-color: #0C4663 !important;
+}
 .contact-form button.btn-primary:hover {
   background-color: #0056b3;
   transform: translateY(-2px);
@@ -2088,6 +2091,8 @@ color: #577E92;
     }
 .nav-link {
   color: #1682C4 !important;
+  font-family: 'Playfair Display' !important;
+      font-size: large !important;
 }
 .icon-top{
   position: relative;
