@@ -16,15 +16,27 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
     crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"
+    integrity="sha512-A7AYk1fGKX6S2SsHywmPkrnzTZHrgiVT7GcQkLGDe2ev0aWb8zejytzS8wjo7PGEXKqJOrjQ4oORtnimIRZBtw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
+    integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link href="./main.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+ <link
+          href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
+          rel="stylesheet"
+        />
 </head>
 
 <body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
- 
- <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block backdrop shadow-transition"
+   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block backdrop shadow-transition"
     data-navbar-on-scroll="data-navbar-on-scroll" style="background-image: none; transition: none;">
-    <div class="container"><a class="navbar-brand" href="index.html"><img src="./asset/image/image.avif" width="118"
+    <div class="container"><a class="navbar-brand" href="index.html"><img src="./asset/image/image.avif" width="200"
           alt="logo"></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
         data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
         aria-label="Toggle navigation"><span class="navbar-toggler-icon"> </span></button>
@@ -197,6 +209,55 @@
       </div>
     </div>
   </footer>
+  <script>
+    window.addEventListener('scroll', function () {
+      const ad = document.getElementsByClassName('navbar');
+      console.log('ad ->', ad);
+      if (window.scrollY > 300) {
+        console.log('ad ->', ad);
 
+        ad[0].style.backgroundColor = 'rgba(249, 250, 253, 0.537)'
+      } else {
+        ad[0].style.backgroundColor = ''
+      }
+    });
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 300) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+<script>
+  const track = document.getElementById('carousel-track');
+  let scrollInterval;
+  let scrollSpeed = 1;
+
+  function autoScroll() {
+    scrollInterval = setInterval(() => {
+      console.log("track.scrollLeft->",track.scrollLeft)
+      console.log("track.clientWidth->",track.clientWidth )
+      console.log("track.scrollWidth->",track.scrollWidth )
+      track.scrollLeft += scrollSpeed;
+      if (track.scrollLeft + track.clientWidth >= track.scrollWidth) {
+      console.log("calll",track.scrollLeft,track.clientWidth);
+      
+      scrollSpeed=1;
+        track.scrollLeft = 0; // Restart when end is reached
+      }
+    }, 2);
+  }
+
+  function pauseScroll() {
+    clearInterval(scrollInterval);
+  }
+
+  function resumeScroll() {
+    autoScroll();
+  }
+  window.onload = autoScroll;
+</script>
 </body>
 </html>
