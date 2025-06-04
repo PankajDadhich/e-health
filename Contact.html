@@ -24,17 +24,16 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css"
     integrity="sha512-1cK78a1o+ht2JcaW6g8OXYwqpev9+6GqOkz9xmBN9iUUhIndKtxwILGWYOSibOKjLsEdjyjZvYDq/cZwNeak0w=="
     crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+    integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <link href="./main.css" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
- <link
-          href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap"
-          rel="stylesheet"
-        />
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&display=swap" rel="stylesheet" />
 </head>
 
 <body class="index-page" data-aos-easing="ease-in-out" data-aos-duration="600" data-aos-delay="0">
-   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block backdrop shadow-transition"
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3 d-block backdrop shadow-transition"
     data-navbar-on-scroll="data-navbar-on-scroll" style="background-image: none; transition: none;">
     <div class="container"><a class="navbar-brand" href="index.html"><img src="./asset/image/image.avif" width="200"
           alt="logo"></a><button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
@@ -56,127 +55,296 @@
           <option value="EN">EN</option>
           <option value="ES">ES</option>
         </select>
-        <button class="btn btn-lg btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" style="">
+        <button class="btn btn-md btn-outline-primary rounded-pill order-1 order-lg-0 ms-lg-4" style="">
           <i class="fa-solid fa-user"></i> Sign In
         </button>
       </div>
     </div>
   </nav>
 
-   <section id="call-to-action" class="section contact-form  py-xxl-10">
-  <div class="container pt-5 py-6">
-    <div class="text-center mb-3 pt-4">
-            <h3>Sound good? Find out if you're qualified</h3>
+  <!-- === STYLE SECTION === -->
+  <style>
+    .option-card input[type="radio"],
+    .option-card input[type="checkbox"] {
+      display: none;
+    }
+
+    .option-card label {
+
+      padding: 10px 40px;
+      border: 2px solid #ccc;
+      border-radius: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+      background-color: #f8f9fa;
+      color: #0C4663;
+    }
+
+    .option-card input[type="radio"]:checked+label,
+    .option-card input[type="checkbox"]:checked+label {
+      border-color: #1682C4;
+      background-color: #EAF6FB;
+      color: #1682C4;
+      box-shadow: 0 0 10px rgba(22, 130, 196, 0.3);
+    }
+
+
+
+    /*.fs-5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0C4663;
+    margin-bottom: 1rem;
+  }*/
+
+    .form-text,
+    .text-muted {
+      font-size: 0.875rem;
+      color: #577E92 !important;
+    }
+
+    .btn-primary {
+      background-color: #1682C4;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #0C4663;
+    }
+
+    .contact-form label.form-label {
+      font-weight: 500 !important;
+      color: #0C4663 !important;
+    }
+
+    .section-header h3 {
+      color: #0C4663;
+      font-weight: 600;
+    }
+  </style>
+  <section class="section contact-form py-xxl-10" id="call-to-action">
+    <div class="container pt-5 py-6">
+      <div class="text-center mb-3 section-header">
+        <h3>Sound good? Find out if you're qualified</h3>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow border-0 p-4">
+
+          
+      <form id="healthForm" novalidate>
+  <div class="row g-4">
+
+    <!-- First Name -->
+    <div class="col-md-6">
+      <label class="form-label">First name <span class="text-danger">*</span></label>
+      <input type="text" class="form-control" name="firstName" required>
+      <div class="invalid-feedback mt-1">Enter a first name.</div>
     </div>
 
-    <div class="row justify-content-center">
-      <div class="col-lg-8">
-        <div class="card shadow border-0 p-4 ">
-          <form>
-            <div class="row g-4">
-              <div class="col-md-6">
-                <label class="form-label">First name*</label>
-                <input type="text" class="form-control" name="firstName" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Last name*</label>
-                <input type="text" class="form-control" name="lastName" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Phone or WhatsApp number*</label>
-                <input type="tel" class="form-control" name="phone" required>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Email*</label>
-                <input type="email" class="form-control" name="email" required>
-              </div>
+    <!-- Last Name -->
+    <div class="col-md-6">
+      <label class="form-label">Last name <span class="text-danger">*</span></label>
+      <input type="text" class="form-control" name="lastName" required>
+      <div class="invalid-feedback mt-1">Enter a last name.</div>
+    </div>
 
-              <div class="col-md-12">
-                <label class="form-label">Have you ever worked in healthcare?*</label>
-                <div class="row">
-                 <div class="form-check col-4 ">
-                  <input class="form-check-input mx-2" type="radio" name="healthcare" id="healthcareYes" value="yes" required>
-                  <label class="form-check-label" for="healthcareYes">Yes</label>
-                </div>
-                <div class="form-check col-4">
-                  <input class="form-check-input" type="radio" name="healthcare" id="healthcareNo" value="no" required>
-                  <label class="form-check-label" for="healthcareNo">No</label>
-                </div>
-                <div class="form-check col-4">
-                  <input class="form-check-input" type="radio" name="healthcare" id="healthcareStudent" value="student" required>
-                  <label class="form-check-label" for="healthcareStudent">I'm still a student</label>
-                </div>
-                </div>
-               
-                <div class="form-text mt-1">Click yes only if you have work experience in a healthcare facility.</div>
-              </div>
+    <!-- Phone -->
+    <div class="col-md-6">
+      <label class="form-label">Phone or WhatsApp <span class="text-danger">*</span></label>
+      <div class="input-group">
+        <select class="form-select no-validate" name="countryCode" style="max-width: 90px;">
+          <option value="">Code</option>
+          <option value="+1">🇺🇸 +1</option>
+          <option value="+91" selected>🇮🇳 +91</option>
+        </select>
+        <input type="tel" class="form-control" name="phone" placeholder="" required>
+      </div>
+      <div class="invalid-feedback mt-1">Enter a phone number.</div>
+    </div>
 
-              <div class="col-md-12">
-                <label class="form-label">I work as a:</label>
-                <input type="text" class="form-control" name="position">
-              </div>
+    <!-- Email -->
+    <div class="col-md-6">
+      <label class="form-label">Email <span class="text-danger">*</span></label>
+      <input type="email" class="form-control" name="email" required>
+      <div class="invalid-feedback mt-1">Enter an email address like example@mysite.com.</div>
+    </div>
 
-              <div class="col-md-6">
-                <label class="form-label">If a nurse, have you passed the NCLEX?*</label>
-                <div class="row">
-                 <div class="form-check col-4 ">
-                  <input class="form-check-input mx-2" type="radio" name="healthcare" id="healthcareYes" value="yes" required>
-                  <label class="form-check-label" for="healthcareYes">Yes</label>
-                </div>
-                <div class="form-check col-4">
-                  <input class="form-check-input" type="radio" name="healthcare" id="healthcareNo" value="no" required>
-                  <label class="form-check-label" for="healthcareNo">No</label>
-                </div>
-              </div>
-              </div>
-              <div class="col-md-6">
-                <label class="form-label">Where do you currently reside?*</label>
-                <input type="text" class="form-control" name="residence" required>
-              </div>
+    <!-- Role -->
+    <div class="col-md-6">
+      <label class="form-label">I work as a:</label>
+      <select class="form-select" name="workRole" required>
+        <option value="">-- select --</option>
+        <option value="RN">Registered Nurse</option>
+        <option value="MT">Medical Technologist</option>
+        <option value="Other">Other</option>
+      </select>
+      <div class="invalid-feedback mt-1">Please select your role.</div>
+    </div>
 
-              <div class="col-md-12">
-                <label class="form-label">Where are you a citizen?*</label>
-                <div class="row">
-                 <div class="form-check col-4 ">
-                  <input class="form-check-input mx-2" type="radio" name="Mexico" id="Mexico" value="Mexico" required>
-                  <label class="form-check-label" for="Mexico">Mexico</label>
-                </div>
-                <div class="form-check col-4">
-                  <input class="form-check-input" type="radio" name="Canada" id="Canada" value="Canada" required>
-                  <label class="form-check-label" for="Canada">Canada</label>
-                </div>
-                <div class="form-check col-4">
-                  <input class="form-check-input" type="radio" name="Other" id="Other" value="Other" required>
-                  <label class="form-check-label" for="Other">Other</label>
-                </div>
-              </div>
-              </div>
+    <!-- Residence -->
+    <div class="col-md-6">
+      <label class="form-label">Where do you currently reside? <span class="text-danger">*</span></label>
+      <input type="text" class="form-control" name="residence" required>
+      <div class="invalid-feedback mt-1">Enter an answer.</div>
+    </div>
 
-              
+    <!-- NCLEX -->
+    <div class="col-6">
+      <label class="form-label mb-3">If a nurse, have you passed the NCLEX? <span class="text-danger">*</span></label>
+      <div class="d-flex flex-wrap gap-3">
+        <div>
+          <input type="radio" class="btn-check" id="nclexYes" name="nclex" value="Yes" required>
+          <label class="btn btn-outline-primary btn-md" for="nclexYes">Yes</label>
+        </div>
+        <div>
+          <input type="radio" class="btn-check" id="nclexNo" name="nclex" value="No" required>
+          <label class="btn btn-outline-primary btn-md" for="nclexNo">No</label>
+        </div>
+      </div>
+      <div class="text-danger small d-none  mt-1" id="nclexError">Choose an option.</div>
+    </div>
 
-              <div class="col-md-12">
-                <label class="form-label">What else do you want us to know?</label>
-                <textarea class="form-control" name="notes" rows="4"></textarea>
-              </div>
+    <!-- Healthcare Experience -->
+    <div class="col-6">
+      <label class="form-label mb-3">Have you ever worked in healthcare? <span class="text-danger">*</span></label>
+      <div class="d-flex flex-wrap gap-3">
+        <div>
+          <input type="radio" class="btn-check" id="healthcareYes" name="healthcareExperience" value="Yes" required>
+          <label class="btn btn-outline-primary btn-md" for="healthcareYes">Yes</label>
+        </div>
+        <div>
+          <input type="radio" class="btn-check" id="healthcareNo" name="healthcareExperience" value="No" required>
+          <label class="btn btn-outline-primary btn-md" for="healthcareNo">No</label>
+        </div>
+        <div>
+          <input type="radio" class="btn-check" id="healthcareStudent" name="healthcareExperience" value="Student" required>
+          <label class="btn btn-outline-primary btn-md" for="healthcareStudent">I'm still a student</label>
+        </div>
+      </div>
+      <div class="text-danger small d-none  mt-1" id="healthcareError">Choose an option.</div>
+    </div>
 
-              <div class="col-md-12">
-                <label class="form-label">Upload File</label>
-                <input type="file" class="form-control" name="documents">
-                <small class="form-text text-muted">
-                  Upload resumes, ID, nursing license, board certifications, and other immigration documents here.
-                </small>
-              </div>
+    <!-- Citizenship -->
+    <div class="col-12">
+      <label class="form-label mb-3">Where are you a citizen? <span class="text-danger">*</span></label>
+      <div class="d-flex flex-wrap gap-3">
+        <div>
+          <input type="radio" class="btn-check" id="citizenMexico" name="citizen" value="Mexico" required>
+          <label class="btn btn-outline-primary btn-md" for="citizenMexico">Mexico</label>
+        </div>
+        <div>
+          <input type="radio" class="btn-check" id="citizenCanada" name="citizen" value="Canada" required>
+          <label class="btn btn-outline-primary btn-md" for="citizenCanada">Canada</label>
+        </div>
+        <div>
+          <input type="radio" class="btn-check" id="citizenOther" name="citizen" value="Other" required>
+          <label class="btn btn-outline-primary btn-md" for="citizenOther">Other</label>
+        </div>
+      </div>
+      <div class="text-danger small d-none  mt-1" id="citizenError">Choose an option.</div>
+    </div>
+ 
+    <!-- Notes -->
+  <div class="col-12">
+  <label class="form-label">What else do you want us to know?</label>
+  <textarea class="form-control no-validate" name="notes" rows="2"></textarea>
+</div>
 
-              <div class="col-12 text-center">
-                <button type="submit" class="btn btn-primary bg-primary px-5 mt-3 rounded-pill">Submit</button>
-              </div>
-            </div>
-          </form>
+
+    <!-- Upload -->
+   
+<div class="col-12">
+      <label class="form-label">Upload File <span class="text-danger">*</span></label>
+      <input type="file" class="form-control" name="documents" required>
+      <div class="invalid-feedback mt-1">Please upload at least one document.</div>
+    </div>
+    <!-- Submit -->
+    <div class="col-12 text-center">
+      <button type="submit" class="btn btn-primary px-5 mt-4 rounded-pill">Submit</button>
+    </div>
+  </div>
+</form>
+</div>
         </div>
       </div>
     </div>
+   <!-- Toast Container -->
+<div id="toastContainer" class="position-fixed top-0 end-0 p-3" style="z-index: 9999">
+  <div id="successToast" class="toast align-items-center text-bg-success border-0" role="alert" aria-live="assertive" aria-atomic="true">
+    <div class="d-flex">
+      <div class="toast-body">
+       Form submitted successfully!
+      </div>
+      <button type="button" class="btn-close btn-close-white me-2 m-auto" data-bs-dismiss="toast" aria-label="Close"></button>
+    </div>
   </div>
-</section>
+</div>
+
+  </section>
+<script>
+document.getElementById("healthForm").addEventListener("submit", function (event) {
+  event.preventDefault();
+  const form = event.target;
+
+  if (!form.checkValidity()) {
+    event.stopPropagation();
+  }
+
+  // Show manual error for radio groups
+  const radioGroups = [
+    { name: 'nclex', errorId: 'nclexError' },
+    { name: 'healthcareExperience', errorId: 'healthcareError' },
+    { name: 'citizen', errorId: 'citizenError' }
+  ];
+
+  radioGroups.forEach(({ name, errorId }) => {
+    const checked = form.querySelector(`input[name="${name}"]:checked`);
+    const errorEl = document.getElementById(errorId);
+    if (!checked) {
+      errorEl.classList.remove("d-none");
+    } else {
+      errorEl.classList.add("d-none");
+    }
+  });
+
+  // Prevent green tick on no-validate fields
+
+
+
+  // Add Bootstrap validation class to form
+  form.classList.add("was-validated");
+// Prevent validation UI on .no-validate fields
+const notesField = form.querySelector('textarea[name="notes"]');
+if (notesField) {
+  notesField.classList.remove('is-valid');
+  notesField.classList.remove('is-invalid');
+  notesField.addEventListener('input', () => {
+    notesField.classList.remove('is-valid');
+    notesField.classList.remove('is-invalid');
+  });
+}
+
+  // Submit only if valid
+if (form.checkValidity()) {
+  // Show toast
+  const toastEl = document.getElementById('successToast');
+  const toast = new bootstrap.Toast(toastEl);
+  toast.show();
+
+  // Refresh page after 2 minutes
+ // setTimeout(() => {
+ //   location.reload();
+ // }, 120000); // 120000 ms = 2 minutes
+}
+
+
+});
+
+</script>
 
 
   <footer class="bg-primary text-white py-4">
@@ -185,7 +353,7 @@
         <div class="col-md-4 mb-4 mb-md-0">
           <h5 class="fw-bold" style="color: #FBA821;">E-Health Global</h5>
           <p class="mb-1">A Global Recruitment, Immigration & Consulting Company.</p>
-          <p class="mb-0">3 Offices: <br/> New York ~ Manila ~ Mexico City</p>
+          <p class="mb-0">3 Offices: <br /> New York ~ Manila ~ Mexico City</p>
         </div>
 
         <div class="col-md-4 mb-4 mb-md-0">
@@ -209,7 +377,7 @@
       </div>
     </div>
   </footer>
-<script>
+  <script>
     window.addEventListener('scroll', function () {
       const ad = document.getElementsByClassName('navbar');
       console.log('ad ->', ad);
@@ -230,5 +398,7 @@
       }
     });
   </script>
+
 </body>
+
 </html>

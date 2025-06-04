@@ -1951,7 +1951,6 @@ button.btn-primary {
 /* === TEXT AREA === */
 .contact-form textarea.form-control {
   resize: vertical;
-  min-height: 120px;
   border-radius: 8px;
 }
 
@@ -2162,15 +2161,10 @@ button.btn-primary {
     background: #fd7e14;
     right: -16px;
   }
-  .chat-bubble p {
-    margin: 0;
-    line-height: 1.4;
-    color: #333;
-    font-size: 0.95rem;
-  }
-  .chat-bubble.question:hover,
-  .chat-bubble.answer:hover {
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-    transition: all 0.2s ease;
-  }
+.no-validate.is-valid,
+.was-validated .no-validate:valid {
+  background-image: none !important;
+  padding-right: 0 !important;
+
+  border-color:gray !important;
+}
