@@ -381,27 +381,27 @@
       </div>
     </div>
   </footer>
-    <script>
-      window.addEventListener('scroll', function () {
-        const ad = document.getElementsByClassName('navbar');
+   <script>
+    window.addEventListener('scroll', function () {
+      const ad = document.getElementsByClassName('navbar');
+      console.log('ad ->', ad);
+      if (window.scrollY > 20) {
         console.log('ad ->', ad);
-        if (window.scrollY > 300) {
-          console.log('ad ->', ad);
 
-          ad[0].style.backgroundColor = 'rgba(249, 250, 253, 0.537)'
-        } else {
-          ad[0].style.backgroundColor = ''
-        }
-      });
-      window.addEventListener('scroll', function () {
-        const navbar = document.querySelector('.navbar');
-        if (window.scrollY > 300) {
-          navbar.classList.add('scrolled');
-        } else {
-          navbar.classList.remove('scrolled');
-        }
-      });
-    </script>
+        ad[0].style.backgroundColor = 'rgba(249, 250, 253, 0.537)'
+      } else {
+        ad[0].style.backgroundColor = ''
+      }
+    });
+    window.addEventListener('scroll', function () {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 300) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
 
 </body>
 
