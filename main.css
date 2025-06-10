@@ -2159,7 +2159,7 @@ button.btn-primary {
     left: -16px;
   }
   .badge-ans {
-    background: #fd7e14;
+    background: #FBA821;
     right: -16px;
   }
 .no-validate.is-valid,
@@ -2169,3 +2169,88 @@ button.btn-primary {
 
   border-color:gray !important;
 }
+
+
+/* start contact css */
+    .option-card input[type="radio"],
+    .option-card input[type="checkbox"] {
+      display: none;
+    }
+
+    .option-card label {
+
+      padding: 10px 40px;
+      border: 2px solid #ccc;
+      border-radius: 1rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      font-weight: 500;
+      background-color: #f8f9fa;
+      color: #0C4663;
+    }
+
+    .option-card input[type="radio"]:checked+label,
+    .option-card input[type="checkbox"]:checked+label {
+      border-color: #1682C4;
+      background-color: #EAF6FB;
+      color: #1682C4;
+      box-shadow: 0 0 10px rgba(22, 130, 196, 0.3);
+    }
+
+
+
+    /*.fs-5 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: #0C4663;
+    margin-bottom: 1rem;
+  }*/
+
+    .form-text,
+    .text-muted {
+      font-size: 0.875rem;
+      color: #577E92 !important;
+    }
+
+    .btn-primary {
+      background-color: #1682C4;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background-color: #0C4663;
+    }
+
+    .contact-form label.form-label {
+      font-weight: 500 !important;
+      color: #0C4663 !important;
+    }
+
+    .section-header h3 {
+      color: #0C4663;
+      font-weight: 600;
+    }
+
+    .text-warning{
+      color: #FBA821 !important; 
+          --bs-text-opacity:'', 
+    }
+
+    .btn-outline-warning {
+    --bs-btn-color: #FBA821 !important;
+    --bs-btn-border-color: #FBA821 !important;
+    --bs-btn-hover-color: #000;
+    --bs-btn-hover-bg: #FBA821 !important;
+    --bs-btn-hover-border-color: #FBA821 !important;
+    --bs-btn-focus-shadow-rgb: 255, 193, 7;
+    --bs-btn-active-color: #000;
+    --bs-btn-active-bg: #FBA821 !important;
+    --bs-btn-active-border-color: #FBA821 !important;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #FBA821 !important;
+    --bs-btn-disabled-bg: transparent;
+    --bs-btn-disabled-border-color: #FBA821 !important;
+    --bs-gradient: none;
+}
+    /* end contact css */
